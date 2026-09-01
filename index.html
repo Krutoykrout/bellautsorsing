@@ -300,8 +300,8 @@
                     </div>
                 </div>
                 <div class="section-about__buttons">
-                    <button class="button button--second" data-modal="modal-form">Оставить заявку</button>
-                    <button class="button" data-modal="modal-form">Получить консультацию</button>
+                    <a class="button button--second" target="_blank" rel="noopener noreferrer" href="https://t.me/trendy_v_taxi">Написать эксперту</a>
+                    <a class="button" href="tel:+79002364023">Позвонить эксперту</a>
                 </div>
                 <div class="section-about__socials socials">
                     <a target="_blank" href="https://t.me/trendy_v_taxi">
@@ -1854,59 +1854,19 @@
     </div>
 </div>
 
-<div class="modal" id="modal-form">
-    <div class="modal__content">
+<div class="modal modal-contact" id="modal-form">
+    <div class="modal__content modal-contact__content">
         <button class="modal__close" data-close>&#10006;</button>
-        <div class="modal__body">
-            <h2>Оставить заявку</h2>
-            <p class="font-size--16">Оставьте свои данные, и мы свяжемся с вами в ближайшее время.</p>
-            <form class="form" action="">
-                <div class="form-fields">
-                    <div class="form-fields form-fields--2">
-                        <div class="form-field">
-                            <label hidden for="modal-name">Ваше имя *</label>
-                            <input id="modal-name" name="name" type="text" placeholder="Ваше имя *" data-required="true">
-                        </div>
-                        <div class="form-field">
-                            <label hidden for="modal-phone">Ваш телефон *</label>
-                            <input id="modal-phone" name="phone" type="tel" placeholder="Ваш телефон *">
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label hidden for="modal-email">E-mail</label>
-                        <input id="modal-email" name="email" type="email" placeholder="E-mail">
-                    </div>
-                    <div class="form-field">
-                        <label hidden for="modal-text">Ваш вопрос, тема письма или комментарий</label>
-                        <input id="modal-text" name="text" type="text" placeholder="Ваш вопрос, тема письма или комментарий">
-                    </div>
-                    <div class="form-field form-field--checkbox">
-                        <label>
-                            <input type="checkbox" name="policy" value="1" data-required="true">
-                            <span class="checkbox"></span>
-                            <span>
-                                Я согласен с условиями обработки&nbsp;<a href="#"> персональных данных</a>
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-button">
-                    <button type="submit" class="button button--second button--second-border">
-                        Оставить заявку
-                    </button>
-                </div>
-            </form>
+        <div class="modal__body modal-contact__body">
+            <h2>Подходит этот тариф?</h2>
+            <p>Обсудите с экспертом, какой вариант будет эффективнее для вашего парка.</p>
+            <div class="modal-contact__actions">
+                <a class="button button--second" target="_blank" rel="noopener noreferrer" href="https://t.me/trendy_v_taxi">Обсудить тариф в Telegram</a>
+                <a class="button" href="tel:+79002364023">Позвонить эксперту</a>
+            </div>
         </div>
     </div>
 </div>
-<div class="modal" id="form-success">
-    <div class="modal__content">
-        <button class="modal__close" data-close>&#10006;</button>
-        <div class="modal__body">
-            <h2>Заявка успешно отправлена!</h2>
-            <p class="font-size--16">Спасибо.</p>
-        </div>
-    </div>
-</div>
+
 </body>
 </html>
