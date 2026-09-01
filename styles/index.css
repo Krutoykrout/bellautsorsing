@@ -2018,8 +2018,10 @@ body.modal-open {
   }
 }
 
-/* Feedback card — final Figma-matched implementation */
+/* Feedback card — revised after approval feedback */
 .footer__contact-card {
+  --contact-body-size: 28px;
+  --contact-body-line: 1.36;
   height: 430px;
   overflow: visible;
 }
@@ -2036,7 +2038,7 @@ body.modal-open {
 }
 .footer .footer__contact-card-title {
   max-width: none;
-  margin: 0 0 20px;
+  margin: 0 0 18px;
   font-size: 48px;
   font-weight: 300;
   line-height: 1.08;
@@ -2044,33 +2046,36 @@ body.modal-open {
   text-align: left;
   text-transform: uppercase;
 }
+.footer__contact-card-lead,
+.footer__contact-card-intro,
+.footer__contact-card-links,
+.footer__contact-card-or,
+.footer__contact-card-row--phone .footer__contact-card-link,
+.footer__contact-card-row--telegram .footer__contact-card-link {
+  font-size: var(--contact-body-size);
+  line-height: var(--contact-body-line);
+}
 .footer__contact-card-lead {
   max-width: none;
-  margin: 0 0 13px;
-  font-size: 24px;
+  margin: 0 0 12px;
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: .045em;
+  letter-spacing: .035em;
 }
 .footer__contact-card-return {
   display: block;
 }
 .footer__contact-card-intro {
   max-width: none;
-  margin: 0 0 23px;
-  font-size: 32px;
+  margin: 0 0 18px;
   font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: .05em;
+  letter-spacing: .035em;
 }
 .footer__contact-card-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-size: 32px;
+  gap: 14px;
   font-weight: 300;
-  line-height: 1.22;
-  letter-spacing: .04em;
+  letter-spacing: .035em;
 }
 .footer__contact-card-row {
   display: flex;
@@ -2087,7 +2092,7 @@ body.modal-open {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  letter-spacing: .05em;
+  letter-spacing: .045em;
 }
 .footer__contact-card-link:hover,
 .footer__contact-card-link:focus {
@@ -2097,23 +2102,19 @@ body.modal-open {
   font-weight: 600;
 }
 .footer__contact-card-row--phone .footer__contact-card-link {
-  letter-spacing: .09em;
+  letter-spacing: .075em;
 }
 .footer__contact-card-row--telegram .footer__contact-card-link {
-  letter-spacing: .08em;
-}
-.footer__contact-card-row--email .footer__contact-card-link {
-  letter-spacing: .045em;
+  letter-spacing: .065em;
 }
 .footer__contact-card-telegram {
-  width: 31px;
-  height: 26px;
+  width: 29px;
+  height: 24px;
   flex: 0 0 auto;
   color: var(--color-white);
 }
 .footer__contact-card-or {
-  font-size: 28px;
-  letter-spacing: .04em;
+  letter-spacing: .035em;
 }
 .footer__contact-card-img {
   z-index: 3;
@@ -2124,24 +2125,28 @@ body.modal-open {
 }
 .footer__contact-card-break-narrow,
 .footer__contact-card-break-mobile,
-.footer__contact-card-break-tablet {
+.footer__contact-card-break-tablet,
+.footer__contact-card-desktop-break {
   display: none;
 }
 
 @media (min-width: 1601px) {
+  .footer__contact-card-desktop-break {
+    display: inline;
+  }
   .footer__contact-card-lead {
     position: relative;
-    top: -4px;
-    margin-bottom: 1px;
-    line-height: 42px;
+    top: -2px;
   }
   .footer__contact-card-row--phone {
-    column-gap: 24px;
+    column-gap: 22px;
   }
 }
 
 @media (max-width: 1600px) {
   .footer__contact-card {
+    --contact-body-size: 26px;
+    --contact-body-line: 1.38;
     height: 560px;
     overflow: visible;
   }
@@ -2153,7 +2158,7 @@ body.modal-open {
   }
   .footer .footer__contact-card-title {
     max-width: 715px;
-    margin-bottom: -1px;
+    margin-bottom: 2px;
     font-size: 48px;
     line-height: 1.28;
     letter-spacing: .05em;
@@ -2162,36 +2167,27 @@ body.modal-open {
     top: -4px;
   }
   .footer__contact-card .footer__contact-card-lead {
-    max-width: 840px;
-    margin-bottom: 7px;
-    font-size: 24px;
-    line-height: 1.6;
-    letter-spacing: .045em;
+    max-width: 850px;
+    margin-bottom: 8px;
+    letter-spacing: .035em;
   }
   .footer__contact-card .footer__contact-card-intro {
     max-width: none;
     margin-bottom: 16px;
-    font-size: 32px;
-    line-height: 1.2;
-    letter-spacing: .05em;
+    letter-spacing: .035em;
     position: relative;
-    top: 3px;
+    top: 2px;
   }
   .footer__contact-card-links {
-    gap: 15px;
-    font-size: 32px;
-    line-height: 1.22;
-    letter-spacing: .04em;
+    gap: 14px;
+    letter-spacing: .035em;
   }
   .footer__contact-card-row {
-    row-gap: 6px;
+    row-gap: 5px;
   }
   .footer__contact-card-row--phone .footer__contact-card-link:last-child {
     position: relative;
-    top: -2px;
-  }
-  .footer__contact-card-row--email {
-    margin-top: 6px;
+    top: -1px;
   }
   .footer__contact-card-break-narrow {
     display: block;
@@ -2209,8 +2205,19 @@ body.modal-open {
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .footer__contact-card-break-narrow {
+    display: none;
+  }
+  .footer__contact-card-desktop-break {
+    display: inline;
+  }
+}
+
 @media (max-width: 768px) {
   .footer__contact-card {
+    --contact-body-size: 22px;
+    --contact-body-line: 28px;
     height: auto;
     min-height: 930px;
     overflow: hidden;
@@ -2248,8 +2255,6 @@ body.modal-open {
   .footer__contact-card .footer__contact-card-lead {
     max-width: 100%;
     margin-bottom: 10px;
-    font-size: 21px;
-    line-height: 28px;
     letter-spacing: .01em;
   }
   .footer__contact-card-return {
@@ -2260,22 +2265,19 @@ body.modal-open {
   .footer__contact-card-break-mobile {
     display: block !important;
   }
+  .footer__contact-card-desktop-break,
   .footer__contact-card-break-tablet {
-    display: none;
+    display: none !important;
   }
   .footer__contact-card .footer__contact-card-intro {
     max-width: 100%;
     margin-bottom: 18px;
-    font-size: 30px;
-    line-height: 32px;
     letter-spacing: .01em;
     position: static;
     top: auto;
   }
   .footer__contact-card-links {
     gap: 20px;
-    font-size: 25px;
-    line-height: 30px;
     letter-spacing: .01em;
   }
   .footer__contact-card-row {
@@ -2284,8 +2286,7 @@ body.modal-open {
     column-gap: 8px;
     row-gap: 2px;
   }
-  .footer__contact-card-row--telegram,
-  .footer__contact-card-row--email {
+  .footer__contact-card-row--telegram {
     flex-direction: column;
   }
   .footer__contact-card-row--phone {
@@ -2297,39 +2298,28 @@ body.modal-open {
   .footer__contact-card-row--phone .footer__contact-card-or {
     display: none;
   }
-  .footer__contact-card-row--phone .footer__contact-card-link {
-    font-size: 28px;
-    line-height: 30px;
+  .footer__contact-card-row--phone .footer__contact-card-link,
+  .footer__contact-card-row--telegram .footer__contact-card-link {
+    font-size: var(--contact-body-size);
+    line-height: var(--contact-body-line);
     letter-spacing: .01em;
   }
   .footer__contact-card-row--phone .footer__contact-card-link:last-child {
     top: 0;
     margin-top: 6px;
   }
-  .footer__contact-card-row--telegram .footer__contact-card-link,
-  .footer__contact-card-row--email .footer__contact-card-link {
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: .01em;
-  }
-  .footer__contact-card-row--email {
-    margin-top: -2px;
-  }
   .footer__contact-card-link {
     gap: 7px;
   }
   .footer__contact-card-telegram {
-    width: 31px;
-    height: 26px;
-  }
-  .footer__contact-card-or {
-    font-size: inherit;
+    width: 29px;
+    height: 24px;
   }
 }
 
 @media (max-width: 500px) {
   .footer__contact-card {
-    min-height: 1110px;
+    min-height: 1010px;
   }
 }
 
