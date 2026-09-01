@@ -1,0 +1,25 @@
+@keyframes fade {
+  0%, 100% {
+  opacity: 1;
+  }
+  50% {
+  opacity: .5;
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotateY(0.1deg);
+    -moz-transform: rotateY(0.1deg);
+    -webkit-transform: rotateY(0.1deg);
+    -o-transform: rotateY(0.1deg);
+    transform: rotateY(0.1deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(359.9deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(359.9deg);
+  }
+}

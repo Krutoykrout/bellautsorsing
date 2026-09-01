@@ -1,0 +1,71 @@
+:root {
+  --color-text: #191347;
+  --color-unactive: #00000080;
+  --color-border: #0000001A;
+  --color-primary: #00D7B5;
+  --color-primary-hover: #00FFD7;
+  --color-primary-focus: #00C0A1;
+  --color-second: #006FB9;
+  --color-second-hover: #0092F3;
+  --color-second-focus: #0161A2;
+  --color-error: #e8042a;
+  --color-white: #FFFFFF;
+  --color-bg: #191347;
+  --color-gradient: linear-gradient(264.73deg, #00D7B5 0%, #0083DB 99.53%);
+  --border-radius: 10px;
+  --border-radius-round: 57px;
+  --border-radius-circle: 100%;
+  --transition: all .3s ease-in-out;
+  --transition-for: .3s ease-in-out;
+  --font-family-base: 'Commissioner', sans-serif;
+  --font-family-second: 'Montserrat', sans-serif;
+  --font-size-base: 24px;
+  --font-size-xs: 16px;
+  --font-size-s: 18px;
+  --font-size-xm: 20px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 48px;
+  --font-size-title: 48px;
+  --font-size-h1: 72px;
+  --font-size-f: 96px;
+  --font-weight: 400;
+  --font-weight-bold: 600;
+  --cursor-pointer: pointer;
+  --base-margin: 20px;
+  --title-margin: 55px;
+  --section-padding: 45px;
+  --base-gap: 30px;
+  --input-padding: 19px 27px;
+}
+
+$media-sm: 768px;
+$media-lg: 992px;
+$media-xl: 1200px;
+$media-xxl: 1600px;
+@media (max-width: $media-xl) {
+  :root {
+    --font-size-h1: 64px;
+    --font-size-f: 74px;
+    --font-size-xxxl: 42px;
+    --title-margin: 37px;
+  }
+}
+@media (max-width: $media-sm) {
+  :root {
+    --font-size-h1: 38px;
+    --font-size-base: 16px;
+    --font-size-xxxl: 32px;
+    --font-size-title: 32px;
+    --font-size-s: 16px;
+    --font-size-xm: 16px;
+    --title-margin: 24px;
+    --title-margin-xl: 28px;
+    --base-gap: 12px;
+    --input-padding: 14px 15px;
+    --section-margin: 17px;
+  }
+  br {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /images/
+Disallow: /js/
+Disallow: /styles/
+Disallow: /fonts/
+Disallow: /lib/
+User-agent: Googlebot
+Allow: /
+User-agent: Yandex
+Allow: /

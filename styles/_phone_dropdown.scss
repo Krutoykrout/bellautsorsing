@@ -1,0 +1,48 @@
+.header__callback-phones {
+    position: relative;
+    min-width: 240px;
+    height: 65px;
+}
+.header__callback-phones-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    @include cross-browser-transition(var(--transition));
+    background: var(--color-primary);
+    color: var(--color-text);
+    padding: 16px 40px 16px 18px;
+    line-height: 100%;
+    font-weight: var(--font-weight);
+    border-radius: var(--border-radius-round);
+    border: 2px solid transparent;
+    box-shadow: 0px 1.13px 1.01px 0px #00D7B537;
+    box-shadow: 0px 9px 26px 0px #00D7B56E;
+
+
+    .arrow {
+        @include cross-browser-transition(var(--transition));
+        position: absolute;
+        right: 12px;
+        top: 14px;
+        cursor: pointer;
+
+        &.rotated {
+            top: 18px;
+            transform: rotate(180deg);
+        }
+    }
+    a.white-link {
+        padding: 0;
+        font-size: 22px;
+    }
+
+    a.hidden {
+        display: none;
+    }
+}
